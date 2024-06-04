@@ -253,11 +253,11 @@ def get_readable_message():
         buttons.ibutton(f"{PAGE_NO}/{PAGES}", "status ref")
         buttons.ibutton("𝖭𝖾𝗑𝗍 ▶️", "status nex")
         button = buttons.build_menu(3)
-    msg += f"<b>⛩️ 𝖳𝖺𝗌𝗄𝗌</b>: {tasks}{bmax_task}"
-    msg += f"\n<b>⛩️ 𝖡𝗈𝗍 𝖴𝗉𝗍𝗂𝗆𝖾</b>: {currentTime}"
-    msg += f"\n<b>⛩️ 𝖥𝗋𝖾𝖾 𝖽𝗂𝗌𝗄 𝖲𝗉𝖺𝖼𝖾</b>: {get_readable_file_size(disk_usage('/usr/src/app/downloads/').free)}"
-    msg += f"\n<b>⛩️ 𝖴𝗉𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝖲𝗉𝖾𝖾𝖽</b>: {get_readable_file_size(up_speed)}/s"
-    msg += f"\n<b>⛩️ 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝖲𝗉𝖾𝖾𝖽</b>: {get_readable_file_size(dl_speed)}/s"
+    msg += f"<b>⛩️ 𝖳𝖺𝗌𝗄𝗌</b> : {tasks}{bmax_task}"
+    msg += f"\n<b>⛩️ 𝖡𝗈𝗍 𝖴𝗉𝗍𝗂𝗆𝖾</b> : {currentTime}"
+    msg += f"\n<b>⛩️ 𝖥𝗋𝖾𝖾 𝖽𝗂𝗌𝗄 𝖲𝗉𝖺𝖼𝖾</b> : {get_readable_file_size(disk_usage('/usr/src/app/downloads/').free)}"
+    msg += f"\n<b>⛩️ 𝖴𝗉𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝖲𝗉𝖾𝖾𝖽</b> : {get_readable_file_size(up_speed)}/s"
+    msg += f"\n<b>⛩️ 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝖲𝗉𝖾𝖾𝖽</b> : {get_readable_file_size(dl_speed)}/s"
     return msg, button
 
 
