@@ -343,7 +343,7 @@ class MirrorLeechListener:
         user_dict = user_data.get(user_id, {})
         msg = f'{escape(name)}\n\n'
         msg += f'🗄️ Size: </b>{get_readable_file_size(size)}\n'
-        msg += f'<b>🕓  Elapsed: </b>{get_readable_time(time() - self.message.date.timestamp())}\n'
+        msg += f'<b>🕓 Elapsed: </b>{get_readable_time(time() - self.message.date.timestamp())}\n'
         LOGGER.info(f'Task Done: {name}')
         buttons = ButtonMaker()
         iButton = ButtonMaker()
@@ -355,7 +355,7 @@ class MirrorLeechListener:
             if mime_type != 0:
                 msg += f'<b>🗑️ Corrupted files: </b>{mime_type}\n'
             msg += f'<b>👤 Uploaded by: </b>{self.tag}\n'
-            msg += f'<b>🏷️ : </b><code>{self.message.from_user.id}</code>\n\n'
+            msg += f'<b>🏷️ User Id : </b><code>{self.message.from_user.id}</code>\n\n'
             if not files:
                 if self.isPrivate:
                     msg += '<b>Files have not been sent for an unspecified reason</b>'
