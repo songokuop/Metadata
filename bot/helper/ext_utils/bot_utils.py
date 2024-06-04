@@ -212,7 +212,7 @@ def get_readable_message():
         globals()['STATUS_START'] = STATUS_LIMIT * (PAGES - 1)
         globals()['PAGE_NO'] = PAGES
     for download in list(download_dict.values())[STATUS_START:STATUS_LIMIT+STATUS_START]:
-        msg += f"<b>{download.status()}:</b> {escape(f'{download.name()}')}\n"
+        msg += f"<b>{download.status()}\n</b> Title : {escape(f'{download.name()}')}\n\n"
         msg += f"🧑‍💼 By : @{source(download)}\n"
         if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_PROCESSING]:
             msg += f"\n<code>{progress_bar(download.progress())}</code> {download.progress()}"
@@ -234,7 +234,7 @@ def get_readable_message():
         else:
             msg += f"\n🗄️Size: {download.size()}"
         msg += f"\n🕓Elapsed: {get_readable_time(time() - download.message.date.timestamp())}"
-        msg += f"\n❌Abort: /stop_{download.gid()[:8]}\n\n"
+        msg += f"\n❌Abort: /stop_{download.gid()[:8]}\n\nꔰꔹꔹꔹꔹꔹꔹꔹꔹꔹꔹꗥꔹꔹꔹꔹꔹꔹꔹꔹꔹꔹꔰ\n\n"
     if len(msg) == 0:
         return None, None
     dl_speed = 0
